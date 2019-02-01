@@ -1,0 +1,16 @@
+{
+    "name": "tarnawski/smoke-test",
+    "authors": [
+        {
+            "name": "Tomasz Tarnawski",
+            "email": "tarnawski27@gmail.com"
+        }
+    ],
+    "config": {
+        "bin-dir": "bin/"
+    },
+    "require": {
+        "behat/behat": "^3.5",
+        "imbo/behat-api-extension": "^2.1"
+    }
+}

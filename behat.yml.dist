@@ -1,0 +1,7 @@
+default:
+    extensions:
+        Imbo\BehatApiExtension:
+            apiClient:
+                base_uri: http://api.associator.eu
+                timeout: 100.0
+                verify: false
