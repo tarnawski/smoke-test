@@ -1,4 +1,5 @@
 composer:
   image: composer:latest
   script:
-  - install --prefer-dist
+  - composer install --no-progress --no-suggest
+  - bin/behat -f progress
