@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="smoke-test" default="build">
+    <property name="workspace" value="${basedir}"/>
+    <target name="build" depends="composer-install,smoke-test"/>
+
+    <target name="composer-install" description="Install vendors">
+        <exec executable="composer" failonerror="true">
+            <arg value="install"/>
+            <arg value="--no-progress"/>
+            <arg value="--no-suggest"/>
+        </exec>
+    </target>
+
+    <target name="smoke-test" description="Run functional tests">
+        <exec executable="${workspace}/bin/behat" failonerror="true">
+            <arg value="--format"/>
+            <arg value="progress"/>
+        </exec>
+    </target>
+</project>
