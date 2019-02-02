@@ -1,5 +1,13 @@
-composer:
-  image: composer:latest
+image: composer:latest
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+  - vendor/
+
+before_script:
+- composer install --no-progress --no-suggest
+
+smoke-tests:
   script:
-  - composer install --no-progress --no-suggest
   - bin/behat -f progress
