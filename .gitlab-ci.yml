@@ -1,4 +1,4 @@
 composer:
-  image: composer/composer:alpine
+  image: composer:latest
   script:
   - install --prefer-dist
