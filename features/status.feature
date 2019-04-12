@@ -11,6 +11,6 @@ Feature: Checking the Associator API operation
     """
     {
       "status": "Success",
-      "version": "1.0"
+      "version": "1.0.1"
     }
     """
